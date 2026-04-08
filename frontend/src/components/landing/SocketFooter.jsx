@@ -4,29 +4,29 @@ import { useInView } from 'react-intersection-observer';
 import { Phone, MapPin, Clock, Mail, ArrowRight, Zap } from 'lucide-react';
 
 const contactInfo = [
-  {
-    icon: Phone,
-    label: 'Call Us',
-    value: '+91 98765 43210',
-    subtext: 'Mon-Sat, 9AM - 8PM',
-  },
+  // {
+  //   icon: Phone,
+  //   label: 'Call Us',
+  //   value: '+91 98765 43210',
+  //   subtext: 'Mon-Sat, 9AM - 8PM',
+  // },
   {
     icon: MapPin,
     label: 'Visit Our Shop',
-    value: '42, Electric Market, Chandni Chowk',
-    subtext: 'New Delhi - 110006',
+    value: 'G-4, Mahesh Tower, Mani Ram Bagiya, General Ganj',
+    subtext: 'Kanpur - 208001',
   },
   {
     icon: Mail,
     label: 'Email',
-    value: 'info@heroelectricals.com',
+    value: 'heroelectricals.shop@gmail.com',
     subtext: 'We reply within 24 hours',
   },
   {
     icon: Clock,
     label: 'Working Hours',
-    value: 'Mon - Sat: 9:00 AM - 8:00 PM',
-    subtext: 'Sunday: 10:00 AM - 2:00 PM',
+    value: 'Mon - Sat: 11:00 AM - 7:30 PM',
+    subtext: 'Sunday: Closed',
   },
 ];
 
