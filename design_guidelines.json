@@ -1,0 +1,107 @@
+{
+  "project_name": "Hero Electricals Landing Page",
+  "theme": "LIGHT",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "emotional_tone": "Clean, authoritative, minimal, tactile, and highly interactive.",
+  "colors": {
+    "background": "#F8F9FA",
+    "surface": "#FFFFFF",
+    "primary": "#0A192F",
+    "secondary": "#2D3748",
+    "accent": "#FBBF24",
+    "text_primary": "#0A192F",
+    "text_secondary": "#4A5568",
+    "border": "#E2E8F0"
+  },
+  "fonts": {
+    "heading": "Outfit",
+    "body": "Manrope",
+    "mono": "JetBrains Mono"
+  },
+  "typography_rules": {
+    "h1": "text-5xl md:text-6xl tracking-tighter font-black text-[#0A192F]",
+    "h2": "text-3xl md:text-5xl tracking-tight font-bold text-[#0A192F]",
+    "h3": "text-xl md:text-2xl font-semibold text-[#2D3748]",
+    "body": "text-base md:text-lg leading-relaxed text-[#4A5568]",
+    "overline": "uppercase tracking-[0.2em] text-xs font-bold text-[#FBBF24]"
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-24 md:py-32 px-6 md:px-12",
+    "grid_strategy": "Use asymmetric bento grids (Mode A: Tetris Grid) for product showcases. Mix col-span-4 and col-span-8 for dynamic tension.",
+    "container_max": "max-w-7xl mx-auto"
+  },
+  "interaction_and_motion": {
+    "electrical_cables": "Use framer-motion <svg><motion.path> with pathLength tied to scroll progress. A continuous 'cable' (stroke: #0A192F, strokeWidth: 3) should weave between sections, acting as the connecting thread.",
+    "switchboard_toggle": "Create a tactile UI switch using CSS. When clicked, toggle the section background between #F8F9FA (Retail) and #0A192F (Wholesale) with a smooth framer-motion layout transition. Ensure text color contrasts properly on both states.",
+    "led_tubelight_reveal": "A long, thin horizontal div (the tubelight) in a dark section. Use framer-motion whileInView to animate opacity from 0.2 to 1 and add `box-shadow: 0 0 40px 10px rgba(251,191,36,0.3)`. This 'turns on' the light, illuminating the product text beneath it.",
+    "socket_connection": "Footer contact section designed like a wall socket. A 'Plug In' button triggers a framer-motion sequence where a cable 'plugs' into the socket, revealing dummy contact info."
+  },
+  "sections_to_build": [
+    {
+      "name": "HeroSection",
+      "description": "Massive typography 'Powering the Modern Spaces' with animated text reveal. An SVG electrical cable drops from the top navigation, wrapping around the text and exiting bottom.",
+      "layout": "Centered, high negative space. Deep Navy text on Soft White background."
+    },
+    {
+      "name": "SwitchboardInteractive",
+      "description": "Interactive section with a physical-looking CSS rocker switch. Toggling 'Retail' vs 'Wholesale' completely changes the content and background color. Retail shows interior lighting and home switches. Wholesale shows industrial spools and bulk orders.",
+      "layout": "Split layout. Switch on the left, dynamic content on the right."
+    },
+    {
+      "name": "LEDSpecialSection",
+      "description": "Dark Navy background section. A CSS tubelight turns on via scroll, revealing the 'Lighting & LEDs' category showcase.",
+      "layout": "Full width, cinematic lighting effect."
+    },
+    {
+      "name": "BentoShowcase",
+      "description": "Asymmetric grid showing Sockets, Connectors, Switches, and Wire Categories.",
+      "layout": "grid-cols-1 md:grid-cols-12 gap-8. Mix large square and tall portrait cards."
+    },
+    {
+      "name": "BrandShowcase",
+      "description": "Marquee of trusted electrical brands we carry.",
+      "layout": "Continuous slow scroll marquee using `react-fast-marquee`. Minimalist, desaturated logos."
+    },
+    {
+      "name": "SocketFooter",
+      "description": "Contact section disguised as an electrical socket. Interactive reveal.",
+      "layout": "Centered, high impact."
+    }
+  ],
+  "image_urls": [
+    {
+      "category": "retail_lighting",
+      "url": "https://images.unsplash.com/photo-1770816306485-862b40ecc402?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBpbnRlcmlvciUyMGxpZ2h0aW5nJTIwbWluaW1hbHxlbnwwfHx8fDE3NzU0NTA4NjF8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern architecture lighting for retail mode."
+    },
+    {
+      "category": "home_switches",
+      "url": "https://images.unsplash.com/photo-1722402116409-9ff8e00fdda9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBsaWdodCUyMHN3aXRjaCUyMG1pbmltYWx8ZW58MHx8fHwxNzc1NDUwODg1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Minimal modern light switch on white wall."
+    },
+    {
+      "category": "wholesale_spool",
+      "url": "https://images.unsplash.com/photo-1758965364875-e090e5423d2d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxlbGVjdHJpY2FsJTIwd2lyZSUyMHNwb29sJTIwaW5kdXN0cmlhbHxlbnwwfHx8fDE3NzU0NTA4ODV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Industrial wire spool for wholesale mode."
+    },
+    {
+      "category": "brand_logo_1",
+      "url": "https://images.unsplash.com/photo-1760037028636-6f42428aeeee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA6MjJ8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBzcG9uc29yJTIwbG9nbyUyMGlzb2xhdGVkfGVufDB8fHx8MTc3NTQ1MDg2Mnww&ixlib=rb-4.1.0&q=85",
+      "description": "Sponsor logo for marquee."
+    },
+    {
+      "category": "brand_logo_2",
+      "url": "https://images.pexels.com/photos/11459428/pexels-photo-11459428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Sponsor logo for marquee."
+    }
+  ],
+  "instructions_to_main_agent": [
+    "1. Setup standard tailwind, framer-motion, lucide-react, react-fast-marquee, and lucide-react (if not already present).",
+    "2. BUILD CUSTOM CSS HARDWARE UI: Do not rely solely on images for the switchboard and tubelight. Build a tactile switchboard component using `div`, `border-radius`, `box-shadow` (mix of inset and drop shadows), and Framer Motion for the toggle animation.",
+    "3. SVG CABLE ANIMATION: Implement a fixed or absolute positioned SVG covering the page. Use `<motion.path>` with `style={{ pathLength: scrollYProgress }}` to animate a continuous cable connecting the sections.",
+    "4. NO MOCK PLACEHOLDERS: Use the provided `image_urls` for all images and logos. Do not use placehold.it or dummyimage.",
+    "5. DATA-TESTID: Ensure all interactive buttons, switches, and toggles have a `data-testid` attribute (e.g., `data-testid='retail-wholesale-toggle'`).",
+    "6. COLOR CONTRAST: During the retail/wholesale background toggle (#F8F9FA to #0A192F), make sure the text color transitions to maintain APCA/WCAG contrast (dark text on light BG, light text on dark BG).",
+    "7. Create visually stunning, padding-heavy layouts. Do NOT center everything. Let asymmetry drive the design."
+  ]
+}
