@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - master  # Set this to your default branch
-    paths:
-      - 'frontend/**'
 
 permissions:
   contents: read
